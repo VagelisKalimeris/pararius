@@ -67,6 +67,7 @@ ChromeWindow.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 sleep(SPEED)
 ChromeWindow.find_element(By.CLASS_NAME, 'form__button--submit').click()
 
+# Bypass Captcha, in case of repeated use and detection
 sleep(5)
 success = False
 while not success:
