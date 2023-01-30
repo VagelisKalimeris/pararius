@@ -9,6 +9,7 @@ from time import sleep
 from json import load
 
 
+# Default speed between user steps
 SPEED = 1
 # Load personal credentials to memory
 creds = load(open('creds.json'))
