@@ -2,7 +2,7 @@
 
 Repeatedly applying to Pararius listings can be tedious and tiresome, 
 especially typing or pasting your personal details. To tackle this productivity 
-issue, I implemented this quick & dirty Selenium script, automating this 
+issue, I implemented this quick & dirty Selenium script, automating the 
 repetitive task.
 
 # Instructions
