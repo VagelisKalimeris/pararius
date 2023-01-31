@@ -21,7 +21,7 @@ assert all([k in creds.keys() for k in cred_keys]), \
 HOMEPAGE = input('Please enter the listing\'s URL:\n')
 # Create browser window
 ChromeWindow = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-# Visit URL
+# Visit valid URL
 try:
     ChromeWindow.get(HOMEPAGE)
 except InvalidArgumentException:
