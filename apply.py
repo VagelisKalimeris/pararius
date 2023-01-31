@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.common import TimeoutException, InvalidArgumentException, \
     NoSuchElementException
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -19,7 +20,7 @@ assert all([k in creds.keys() for k in cred_keys]), \
 # Retrieve target URL
 HOMEPAGE = input('Please enter the listing\'s URL:\n')
 # Create browser window
-ChromeWindow = webdriver.Chrome(service=Service('/chromedriver'))
+ChromeWindow = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 # Visit URL
 try:
     ChromeWindow.get(HOMEPAGE)

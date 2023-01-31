@@ -1,8 +1,9 @@
 # Objective
 
-Repeatedly applying to Pararius listings can be tiresome, especially typing or 
-pasting your personal details. I implemented this quick & dirty Selenium script, 
-automating this repetitive task.
+Repeatedly applying to Pararius listings can be tedious and tiresome, 
+especially typing or pasting your personal details. To tackle this productivity 
+issue, I implemented this quick & dirty Selenium script, automating this 
+repetitive task.
 
 # Instructions
 
