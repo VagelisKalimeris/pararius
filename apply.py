@@ -12,9 +12,9 @@ from json import load
 # Default speed between user steps
 SPEED = 1
 # Load personal credentials to memory
-creds = load(open('creds.json'))
-assert all([k in creds.keys() for k in
-    ['my_greeting', 'first_name', 'last_name', 'email', 'phone']]), \
+creds, cred_keys = load(open('creds.json.json')), \
+    ['message', 'first_name', 'last_name', 'email', 'phone']
+assert all([k in creds.keys() for k in cred_keys]), \
     'Error! Missing information from credentials file!'
 # Retrieve target URL
 HOMEPAGE = input('Please enter the listing\'s URL:\n')
@@ -39,26 +39,14 @@ except TimeoutException:
 
 # Press contact agent button
 lmnt = ChromeWindow.find_element(By.CLASS_NAME,
-
     'agent-summary__agent-contact-request')
 ChromeWindow.execute_script("arguments[0].click();", lmnt)
 
-# Fill fields
-sleep(SPEED)
-ChromeWindow.find_element(By.NAME,
-    'listing_contact_agent_form[message]').send_keys(creds['my_greeting'])
-sleep(SPEED)
-ChromeWindow.find_element(By.NAME,
-    'listing_contact_agent_form[first_name]').send_keys(creds['first_name'])
-sleep(SPEED)
-ChromeWindow.find_element(By.NAME,
-    'listing_contact_agent_form[last_name]').send_keys(creds['last_name'])
-sleep(SPEED)
-ChromeWindow.find_element(By.NAME,
-    'listing_contact_agent_form[email]').send_keys(creds['email'])
-sleep(SPEED)
-ChromeWindow.find_element(By.NAME,
-    'listing_contact_agent_form[phone]').send_keys(creds['phone'])
+# Fill credential fields
+for cred in cred_keys:
+    sleep(SPEED)
+    ChromeWindow.find_element(By.NAME,
+        'listing_contact_agent_form[' + cred + ']').send_keys(creds[cred])
 
 # Move to the bottom of the page
 sleep(SPEED)
