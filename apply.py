@@ -12,7 +12,7 @@ from json import load
 # Default speed between user steps
 SPEED = 1
 # Load personal credentials to memory
-creds, cred_keys = load(open('creds.json.json')), \
+creds, cred_keys = load(open('creds.json')), \
     ['message', 'first_name', 'last_name', 'email', 'phone']
 assert all([k in creds.keys() for k in cred_keys]), \
     'Error! Missing information from credentials file!'
