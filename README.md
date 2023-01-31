@@ -14,7 +14,7 @@ If you haven't already, setup Selenium by following instructions
 Go to **creds.json** file and enter your credentials. For example:
 
     {
-      "my_greeting": "Hi, I am awesome!",
+      "message": "Hi, I am awesome!",
       "first_name": "John",
       "last_name": "Doe",
       "email": "johndoe@mail.com",

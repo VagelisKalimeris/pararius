@@ -19,7 +19,7 @@ assert all([k in creds.keys() for k in cred_keys]), \
 # Retrieve target URL
 HOMEPAGE = input('Please enter the listing\'s URL:\n')
 # Create browser window
-ChromeWindow = webdriver.Chrome(service=Service('chromedriver'))
+ChromeWindow = webdriver.Chrome(service=Service('/chromedriver'))
 # Visit URL
 try:
     ChromeWindow.get(HOMEPAGE)
