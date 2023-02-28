@@ -8,8 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 from json import load
+import ascii_art
 
-
+print(ascii_art.greeting)
 # Default speed between user steps
 SPEED = 1
 # Load personal credentials to memory
@@ -17,6 +18,7 @@ creds, cred_keys = load(open('creds.json')), \
     ['message', 'first_name', 'last_name', 'email', 'phone']
 assert all([k in creds.keys() for k in cred_keys]), \
     'Error! Missing information from credentials file!'
+
 # Retrieve target URL
 HOMEPAGE = input('Please enter the listing\'s URL:\n')
 # Create browser window
@@ -68,7 +70,7 @@ while not success:
         ChromeWindow.execute_script("window.scrollTo(0, document.body.scrollHeight)")
         ChromeWindow.find_element(By.CLASS_NAME, 'form__button--submit').click()
     except NoSuchElementException:
-        print('Success!')
+        print(ascii_art.success)
         success = True
 
 # Close browser  window - Quit
