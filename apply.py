@@ -8,15 +8,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 from json import load
-import ascii_art
-
+from data import ascii_art
 
 # Default speed between user steps
 SPEED = 1
 
 print(ascii_art.greeting)
 # Load personal credentials to memory
-creds, cred_keys = load(open('creds.json')), \
+creds, cred_keys = load(open('data/creds.json')), \
     ['message', 'first_name', 'last_name', 'email', 'phone']
 assert all([k in creds.keys() for k in cred_keys]), \
     'Error! Missing information from credentials file!'

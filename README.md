@@ -9,10 +9,10 @@ repetitive task.
 
 ### Selenium
 If you haven't already, setup Selenium by following instructions 
-[here](selenium_setup.md).
+[here](docs/selenium_setup.md).
 
 ### Credentials
-Go to **creds.json** file and enter your credentials. For example:
+Go to [creds.json](data/creds.json) file and enter your credentials. For example:
 
     {
       "message": "Hi, I am awesome!",
