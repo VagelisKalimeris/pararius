@@ -10,9 +10,11 @@ from time import sleep
 from json import load
 import ascii_art
 
-print(ascii_art.greeting)
+
 # Default speed between user steps
 SPEED = 1
+
+print(ascii_art.greeting)
 # Load personal credentials to memory
 creds, cred_keys = load(open('creds.json')), \
     ['message', 'first_name', 'last_name', 'email', 'phone']
