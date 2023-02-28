@@ -5,11 +5,16 @@ especially typing or pasting your personal details. To tackle this productivity
 issue, I implemented this quick & dirty Selenium script, automating the 
 repetitive task.
 
-# Instructions
 
+# Requirements
+### Python
+Developed and tested under Python 3.11
 ### Selenium
 If you haven't already, setup Selenium by following instructions 
 [here](docs/selenium_setup.md).
+
+
+# Instructions
 
 ### Credentials
 Go to [creds.json](data/creds.json) file and enter your credentials. For example:
